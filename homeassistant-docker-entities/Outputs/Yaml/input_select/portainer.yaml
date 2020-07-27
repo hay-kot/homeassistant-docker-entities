@@ -1,0 +1,11 @@
+# Portainer #################################################
+    docker_cmd_portainer:
+        name: Docker portainer Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

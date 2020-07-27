@@ -1,0 +1,11 @@
+# Radarr #################################################
+    docker_cmd_radarr:
+        name: Docker radarr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

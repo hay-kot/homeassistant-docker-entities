@@ -1,0 +1,18 @@
+# Influxdb #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_influxdb_up_time
+        name: null
+      - entity: sensor.docker_influxdb_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_influxdb
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_influxdb_status
+    icon: 'mdi:docker'
+    name: influxdb
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

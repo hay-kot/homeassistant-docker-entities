@@ -1,0 +1,8 @@
+# Nginx_app #################################################
+      nginx_app_cpu:
+        data_group: cgroup_nginx_app.cpu_limit
+        element: 'used'
+      nginx_app_ram:
+        data_group: cgroup_nginx_app.mem_usage_limit
+        element: 'used'
+

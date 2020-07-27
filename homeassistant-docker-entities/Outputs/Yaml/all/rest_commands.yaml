@@ -1,0 +1,176 @@
+# Filestash #################################################
+  docker_filestash_start:
+    url: 'http://10.10.10.92:9919/containers/filestash/start'
+    method: POST
+  docker_filestash_stop:
+    url: 'http://10.10.10.92:9919/containers/filestash/stop'
+    method: POST
+  docker_filestash_restart:
+    url: 'http://10.10.10.92:9919/containers/filestash/restart'
+    method: POST
+
+# Grafana #################################################
+  docker_grafana_start:
+    url: 'http://10.10.10.92:9919/containers/grafana/start'
+    method: POST
+  docker_grafana_stop:
+    url: 'http://10.10.10.92:9919/containers/grafana/stop'
+    method: POST
+  docker_grafana_restart:
+    url: 'http://10.10.10.92:9919/containers/grafana/restart'
+    method: POST
+
+# Pihole #################################################
+  docker_pihole_start:
+    url: 'http://10.10.10.92:9919/containers/pihole/start'
+    method: POST
+  docker_pihole_stop:
+    url: 'http://10.10.10.92:9919/containers/pihole/stop'
+    method: POST
+  docker_pihole_restart:
+    url: 'http://10.10.10.92:9919/containers/pihole/restart'
+    method: POST
+
+# Sonarr #################################################
+  docker_sonarr_start:
+    url: 'http://10.10.10.92:9919/containers/sonarr/start'
+    method: POST
+  docker_sonarr_stop:
+    url: 'http://10.10.10.92:9919/containers/sonarr/stop'
+    method: POST
+  docker_sonarr_restart:
+    url: 'http://10.10.10.92:9919/containers/sonarr/restart'
+    method: POST
+
+# Influxdb #################################################
+  docker_influxdb_start:
+    url: 'http://10.10.10.92:9919/containers/influxdb/start'
+    method: POST
+  docker_influxdb_stop:
+    url: 'http://10.10.10.92:9919/containers/influxdb/stop'
+    method: POST
+  docker_influxdb_restart:
+    url: 'http://10.10.10.92:9919/containers/influxdb/restart'
+    method: POST
+
+# Portainer #################################################
+  docker_portainer_start:
+    url: 'http://10.10.10.92:9919/containers/portainer/start'
+    method: POST
+  docker_portainer_stop:
+    url: 'http://10.10.10.92:9919/containers/portainer/stop'
+    method: POST
+  docker_portainer_restart:
+    url: 'http://10.10.10.92:9919/containers/portainer/restart'
+    method: POST
+
+# Radarr #################################################
+  docker_radarr_start:
+    url: 'http://10.10.10.92:9919/containers/radarr/start'
+    method: POST
+  docker_radarr_stop:
+    url: 'http://10.10.10.92:9919/containers/radarr/stop'
+    method: POST
+  docker_radarr_restart:
+    url: 'http://10.10.10.92:9919/containers/radarr/restart'
+    method: POST
+
+# Nginx_app #################################################
+  docker_nginx_app_start:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/start'
+    method: POST
+  docker_nginx_app_stop:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/stop'
+    method: POST
+  docker_nginx_app_restart:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/restart'
+    method: POST
+
+# Wiki_db #################################################
+  docker_wiki_db_start:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/start'
+    method: POST
+  docker_wiki_db_stop:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/stop'
+    method: POST
+  docker_wiki_db_restart:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/restart'
+    method: POST
+
+# Filestash_office #################################################
+  docker_filestash_office_start:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/start'
+    method: POST
+  docker_filestash_office_stop:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/stop'
+    method: POST
+  docker_filestash_office_restart:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/restart'
+    method: POST
+
+# Organizr #################################################
+  docker_organizr_start:
+    url: 'http://10.10.10.92:9919/containers/organizr/start'
+    method: POST
+  docker_organizr_stop:
+    url: 'http://10.10.10.92:9919/containers/organizr/stop'
+    method: POST
+  docker_organizr_restart:
+    url: 'http://10.10.10.92:9919/containers/organizr/restart'
+    method: POST
+
+# Wiki_app #################################################
+  docker_wiki_app_start:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/start'
+    method: POST
+  docker_wiki_app_stop:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/stop'
+    method: POST
+  docker_wiki_app_restart:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/restart'
+    method: POST
+
+# Emby #################################################
+  docker_emby_start:
+    url: 'http://10.10.10.92:9919/containers/emby/start'
+    method: POST
+  docker_emby_stop:
+    url: 'http://10.10.10.92:9919/containers/emby/stop'
+    method: POST
+  docker_emby_restart:
+    url: 'http://10.10.10.92:9919/containers/emby/restart'
+    method: POST
+
+# Watchtower #################################################
+  docker_watchtower_start:
+    url: 'http://10.10.10.92:9919/containers/watchtower/start'
+    method: POST
+  docker_watchtower_stop:
+    url: 'http://10.10.10.92:9919/containers/watchtower/stop'
+    method: POST
+  docker_watchtower_restart:
+    url: 'http://10.10.10.92:9919/containers/watchtower/restart'
+    method: POST
+
+# Nginx_db #################################################
+  docker_nginx_db_start:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/start'
+    method: POST
+  docker_nginx_db_stop:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/stop'
+    method: POST
+  docker_nginx_db_restart:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/restart'
+    method: POST
+
+# Guacamole #################################################
+  docker_guacamole_start:
+    url: 'http://10.10.10.92:9919/containers/guacamole/start'
+    method: POST
+  docker_guacamole_stop:
+    url: 'http://10.10.10.92:9919/containers/guacamole/stop'
+    method: POST
+  docker_guacamole_restart:
+    url: 'http://10.10.10.92:9919/containers/guacamole/restart'
+    method: POST
+

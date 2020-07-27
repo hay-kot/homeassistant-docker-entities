@@ -1,0 +1,11 @@
+# Filestash_office #################################################
+  docker_filestash_office_start:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/start'
+    method: POST
+  docker_filestash_office_stop:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/stop'
+    method: POST
+  docker_filestash_office_restart:
+    url: 'http://10.10.10.92:9919/containers/filestash_office/restart'
+    method: POST
+

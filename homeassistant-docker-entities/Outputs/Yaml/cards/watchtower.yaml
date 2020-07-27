@@ -1,0 +1,18 @@
+# Watchtower #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_watchtower_up_time
+        name: null
+      - entity: sensor.docker_watchtower_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_watchtower
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_watchtower_status
+    icon: 'mdi:docker'
+    name: watchtower
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

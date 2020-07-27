@@ -1,0 +1,8 @@
+# Pihole #################################################
+      pihole_cpu:
+        data_group: cgroup_pihole.cpu_limit
+        element: 'used'
+      pihole_ram:
+        data_group: cgroup_pihole.mem_usage_limit
+        element: 'used'
+

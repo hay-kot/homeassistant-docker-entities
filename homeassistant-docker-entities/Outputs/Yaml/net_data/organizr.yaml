@@ -1,0 +1,8 @@
+# Organizr #################################################
+      organizr_cpu:
+        data_group: cgroup_organizr.cpu_limit
+        element: 'used'
+      organizr_ram:
+        data_group: cgroup_organizr.mem_usage_limit
+        element: 'used'
+

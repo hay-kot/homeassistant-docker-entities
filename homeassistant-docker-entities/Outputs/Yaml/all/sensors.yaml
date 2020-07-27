@@ -1,0 +1,192 @@
+# Filestash #################################################
+  - name: docker_filestash_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_filestash_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Grafana #################################################
+  - name: docker_grafana_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22grafana%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_grafana_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22grafana%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Pihole #################################################
+  - name: docker_pihole_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22pihole%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_pihole_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22pihole%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Sonarr #################################################
+  - name: docker_sonarr_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22sonarr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_sonarr_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22sonarr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Influxdb #################################################
+  - name: docker_influxdb_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22influxdb%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_influxdb_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22influxdb%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Portainer #################################################
+  - name: docker_portainer_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22portainer%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_portainer_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22portainer%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Radarr #################################################
+  - name: docker_radarr_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22radarr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_radarr_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22radarr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Nginx_app #################################################
+  - name: docker_nginx_app_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22nginx_app%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_nginx_app_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22nginx_app%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Wiki_db #################################################
+  - name: docker_wiki_db_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22wiki_db%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_wiki_db_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22wiki_db%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Filestash_office #################################################
+  - name: docker_filestash_office_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash_office%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_filestash_office_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash_office%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Organizr #################################################
+  - name: docker_organizr_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22organizr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_organizr_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22organizr%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Wiki_app #################################################
+  - name: docker_wiki_app_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22wiki_app%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_wiki_app_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22wiki_app%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Emby #################################################
+  - name: docker_emby_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22emby%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_emby_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22emby%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Watchtower #################################################
+  - name: docker_watchtower_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22watchtower%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_watchtower_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22watchtower%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Nginx_db #################################################
+  - name: docker_nginx_db_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22nginx_db%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_nginx_db_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22nginx_db%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+
+# Guacamole #################################################
+  - name: docker_guacamole_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22guacamole%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_guacamole_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22guacamole%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+

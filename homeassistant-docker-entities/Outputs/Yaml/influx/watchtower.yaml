@@ -1,0 +1,4 @@
+      - sensor.docker_watchtower_status
+      - sensor.docker_watchtower_up_time
+      - sensor.docker_watchtower_cpu
+      - sensor.docker_watchtower_ram

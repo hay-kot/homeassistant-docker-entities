@@ -1,0 +1,4 @@
+      - sensor.docker_nginx_db_status
+      - sensor.docker_nginx_db_up_time
+      - sensor.docker_nginx_db_cpu
+      - sensor.docker_nginx_db_ram

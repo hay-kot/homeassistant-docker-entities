@@ -1,0 +1,11 @@
+# Sonarr #################################################
+  docker_sonarr_start:
+    url: 'http://10.10.10.92:9919/containers/sonarr/start'
+    method: POST
+  docker_sonarr_stop:
+    url: 'http://10.10.10.92:9919/containers/sonarr/stop'
+    method: POST
+  docker_sonarr_restart:
+    url: 'http://10.10.10.92:9919/containers/sonarr/restart'
+    method: POST
+

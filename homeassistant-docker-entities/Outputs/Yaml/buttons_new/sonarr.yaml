@@ -1,0 +1,85 @@
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_sonarr_state
+name: sonarr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_sonarr
+type: 'custom:button-card'

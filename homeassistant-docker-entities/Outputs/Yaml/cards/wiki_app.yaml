@@ -1,0 +1,18 @@
+# Wiki_app #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_wiki_app_up_time
+        name: null
+      - entity: sensor.docker_wiki_app_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_wiki_app
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_wiki_app_status
+    icon: 'mdi:docker'
+    name: wiki_app
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

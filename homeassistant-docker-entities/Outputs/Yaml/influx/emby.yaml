@@ -1,0 +1,4 @@
+      - sensor.docker_emby_status
+      - sensor.docker_emby_up_time
+      - sensor.docker_emby_cpu
+      - sensor.docker_emby_ram

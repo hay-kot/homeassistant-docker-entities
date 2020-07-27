@@ -1,0 +1,4 @@
+      - sensor.docker_organizr_status
+      - sensor.docker_organizr_up_time
+      - sensor.docker_organizr_cpu
+      - sensor.docker_organizr_ram

@@ -1,0 +1,11 @@
+# Filestash #################################################
+  docker_filestash_start:
+    url: 'http://10.10.10.92:9919/containers/filestash/start'
+    method: POST
+  docker_filestash_stop:
+    url: 'http://10.10.10.92:9919/containers/filestash/stop'
+    method: POST
+  docker_filestash_restart:
+    url: 'http://10.10.10.92:9919/containers/filestash/restart'
+    method: POST
+

@@ -1,0 +1,4 @@
+      - sensor.docker_sonarr_status
+      - sensor.docker_sonarr_up_time
+      - sensor.docker_sonarr_cpu
+      - sensor.docker_sonarr_ram

@@ -1,0 +1,1360 @@
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_filestash_state
+name: filestash
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_filestash
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_grafana_state
+name: grafana
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_grafana
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_pihole_state
+name: pihole
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_pihole
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_sonarr_state
+name: sonarr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_sonarr
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_influxdb_state
+name: influxdb
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_influxdb
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_portainer_state
+name: portainer
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_portainer
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_radarr_state
+name: radarr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_radarr
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_nginx_app_state
+name: nginx_app
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_nginx_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_wiki_db_state
+name: wiki_db
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_wiki_db
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_filestash_office_state
+name: filestash_office
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_filestash_office
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_organizr_state
+name: organizr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_organizr
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_wiki_app_state
+name: wiki_app
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_emby_state
+name: emby
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_emby
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_watchtower_state
+name: watchtower
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_watchtower
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_nginx_db_state
+name: nginx_db
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_nginx_db
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_cpu'].state}%</span></span>`
+    ]]]
+  state: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> State: <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_state'].state}</span></span>`
+    ]]]
+  mem: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> RAM: <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_memory_percent'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_status'].state}</span></span>`
+    ]]]
+entity: sensor.docker_guacamole_state
+name: guacamole
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    operator: default
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    up:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    mem:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+    state:
+      - padding-bottom: 0px
+      - align-self: start
+      - padding-left: 2px
+      - font-size: 12px
+      - justify-self: start
+  grid:
+    - grid-template-areas: '"i i" "n n" "state state" "up up" "cpu cpu" "mem mem"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: call-service
+  service: switch.toggle
+  service_data:
+    entity_id: switch.docker_guacamole
+type: 'custom:button-card'

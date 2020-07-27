@@ -1,0 +1,11 @@
+# Emby #################################################
+  docker_emby_start:
+    url: 'http://10.10.10.92:9919/containers/emby/start'
+    method: POST
+  docker_emby_stop:
+    url: 'http://10.10.10.92:9919/containers/emby/stop'
+    method: POST
+  docker_emby_restart:
+    url: 'http://10.10.10.92:9919/containers/emby/restart'
+    method: POST
+

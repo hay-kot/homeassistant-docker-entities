@@ -1,0 +1,176 @@
+# Filestash #################################################
+    docker_cmd_filestash:
+        name: Docker filestash Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Grafana #################################################
+    docker_cmd_grafana:
+        name: Docker grafana Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Pihole #################################################
+    docker_cmd_pihole:
+        name: Docker pihole Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Sonarr #################################################
+    docker_cmd_sonarr:
+        name: Docker sonarr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Influxdb #################################################
+    docker_cmd_influxdb:
+        name: Docker influxdb Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Portainer #################################################
+    docker_cmd_portainer:
+        name: Docker portainer Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Radarr #################################################
+    docker_cmd_radarr:
+        name: Docker radarr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Nginx_app #################################################
+    docker_cmd_nginx_app:
+        name: Docker nginx_app Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Wiki_db #################################################
+    docker_cmd_wiki_db:
+        name: Docker wiki_db Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Filestash_office #################################################
+    docker_cmd_filestash_office:
+        name: Docker filestash_office Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Organizr #################################################
+    docker_cmd_organizr:
+        name: Docker organizr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Wiki_app #################################################
+    docker_cmd_wiki_app:
+        name: Docker wiki_app Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Emby #################################################
+    docker_cmd_emby:
+        name: Docker emby Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Watchtower #################################################
+    docker_cmd_watchtower:
+        name: Docker watchtower Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Nginx_db #################################################
+    docker_cmd_nginx_db:
+        name: Docker nginx_db Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+
+# Guacamole #################################################
+    docker_cmd_guacamole:
+        name: Docker guacamole Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

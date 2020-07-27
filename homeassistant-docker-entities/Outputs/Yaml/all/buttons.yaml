@@ -1,0 +1,1008 @@
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_filestash_status
+name: filestash
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_filestash_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_filestash_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_grafana_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_grafana_status
+name: grafana
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_grafana_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_grafana_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_pihole_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_pihole_status
+name: pihole
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_pihole_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_pihole_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_sonarr_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_sonarr_status
+name: sonarr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_sonarr_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_sonarr_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_influxdb_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_influxdb_status
+name: influxdb
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_influxdb_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_influxdb_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_portainer_status
+name: portainer
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_portainer_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_portainer_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_radarr_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_radarr_status
+name: radarr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_radarr_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_radarr_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_app_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_nginx_app_status
+name: nginx_app
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_nginx_app_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_nginx_app_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_db_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_wiki_db_status
+name: wiki_db
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_wiki_db_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_wiki_db_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_filestash_office_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_filestash_office_status
+name: filestash_office
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_filestash_office_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_filestash_office_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_organizr_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_organizr_status
+name: organizr
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_organizr_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_organizr_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_wiki_app_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_wiki_app_status
+name: wiki_app
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_wiki_app_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_wiki_app_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_emby_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_emby_status
+name: emby
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_emby_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_emby_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_watchtower_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_watchtower_status
+name: watchtower
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_watchtower_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_watchtower_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_nginx_db_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_nginx_db_status
+name: nginx_db
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_nginx_db_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_nginx_db_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_guacamole_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_guacamole_status
+name: guacamole
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_guacamole_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_guacamole_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'

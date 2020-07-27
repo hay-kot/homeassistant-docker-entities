@@ -1,0 +1,11 @@
+# Pihole #################################################
+    docker_cmd_pihole:
+        name: Docker pihole Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

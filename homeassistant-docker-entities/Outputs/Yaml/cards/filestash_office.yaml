@@ -1,0 +1,18 @@
+# Filestash_office #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_filestash_office_up_time
+        name: null
+      - entity: sensor.docker_filestash_office_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_filestash_office
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_filestash_office_status
+    icon: 'mdi:docker'
+    name: filestash_office
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

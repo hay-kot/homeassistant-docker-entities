@@ -1,0 +1,11 @@
+# Influxdb #################################################
+    docker_cmd_influxdb:
+        name: Docker influxdb Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

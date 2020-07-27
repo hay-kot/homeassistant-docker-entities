@@ -1,0 +1,8 @@
+# Grafana #################################################
+      grafana_cpu:
+        data_group: cgroup_grafana.cpu_limit
+        element: 'used'
+      grafana_ram:
+        data_group: cgroup_grafana.mem_usage_limit
+        element: 'used'
+

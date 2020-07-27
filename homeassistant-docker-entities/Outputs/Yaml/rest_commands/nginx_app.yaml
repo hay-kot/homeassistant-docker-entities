@@ -1,0 +1,11 @@
+# Nginx_app #################################################
+  docker_nginx_app_start:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/start'
+    method: POST
+  docker_nginx_app_stop:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/stop'
+    method: POST
+  docker_nginx_app_restart:
+    url: 'http://10.10.10.92:9919/containers/nginx_app/restart'
+    method: POST
+

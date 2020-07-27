@@ -1,0 +1,11 @@
+# Pihole #################################################
+  docker_pihole_start:
+    url: 'http://10.10.10.92:9919/containers/pihole/start'
+    method: POST
+  docker_pihole_stop:
+    url: 'http://10.10.10.92:9919/containers/pihole/stop'
+    method: POST
+  docker_pihole_restart:
+    url: 'http://10.10.10.92:9919/containers/pihole/restart'
+    method: POST
+

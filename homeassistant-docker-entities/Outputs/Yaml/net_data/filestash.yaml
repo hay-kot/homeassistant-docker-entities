@@ -1,0 +1,8 @@
+# Filestash #################################################
+      filestash_cpu:
+        data_group: cgroup_filestash.cpu_limit
+        element: 'used'
+      filestash_ram:
+        data_group: cgroup_filestash.mem_usage_limit
+        element: 'used'
+

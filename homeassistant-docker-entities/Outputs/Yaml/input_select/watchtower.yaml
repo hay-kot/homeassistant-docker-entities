@@ -1,0 +1,11 @@
+# Watchtower #################################################
+    docker_cmd_watchtower:
+        name: Docker watchtower Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

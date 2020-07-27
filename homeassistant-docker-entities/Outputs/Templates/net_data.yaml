@@ -1,0 +1,8 @@
+# CONTAINER_NAME #################################################
+      ALIAS_cpu:
+        data_group: cgroup_ALIAS.cpu_limit
+        element: 'used'
+      ALIAS_ram:
+        data_group: cgroup_ALIAS.mem_usage_limit
+        element: 'used'
+

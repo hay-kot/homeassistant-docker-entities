@@ -1,0 +1,4 @@
+      - sensor.docker_filestash_status
+      - sensor.docker_filestash_up_time
+      - sensor.docker_filestash_cpu
+      - sensor.docker_filestash_ram

@@ -1,0 +1,4 @@
+      - sensor.docker_guacamole_status
+      - sensor.docker_guacamole_up_time
+      - sensor.docker_guacamole_cpu
+      - sensor.docker_guacamole_ram

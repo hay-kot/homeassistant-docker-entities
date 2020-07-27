@@ -1,0 +1,11 @@
+# Emby #################################################
+    docker_cmd_emby:
+        name: Docker emby Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

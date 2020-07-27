@@ -1,0 +1,11 @@
+# Sonarr #################################################
+    docker_cmd_sonarr:
+        name: Docker sonarr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

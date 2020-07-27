@@ -1,0 +1,18 @@
+# Portainer #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_portainer_up_time
+        name: null
+      - entity: sensor.docker_portainer_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_portainer
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_portainer_status
+    icon: 'mdi:docker'
+    name: portainer
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

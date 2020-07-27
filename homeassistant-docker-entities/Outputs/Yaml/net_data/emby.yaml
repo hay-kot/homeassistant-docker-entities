@@ -1,0 +1,8 @@
+# Emby #################################################
+      emby_cpu:
+        data_group: cgroup_emby.cpu_limit
+        element: 'used'
+      emby_ram:
+        data_group: cgroup_emby.mem_usage_limit
+        element: 'used'
+

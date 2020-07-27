@@ -1,0 +1,8 @@
+# Watchtower #################################################
+      watchtower_cpu:
+        data_group: cgroup_watchtower.cpu_limit
+        element: 'used'
+      watchtower_ram:
+        data_group: cgroup_watchtower.mem_usage_limit
+        element: 'used'
+

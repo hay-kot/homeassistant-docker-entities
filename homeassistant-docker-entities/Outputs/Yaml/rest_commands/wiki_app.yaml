@@ -1,0 +1,11 @@
+# Wiki_app #################################################
+  docker_wiki_app_start:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/start'
+    method: POST
+  docker_wiki_app_stop:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/stop'
+    method: POST
+  docker_wiki_app_restart:
+    url: 'http://10.10.10.92:9919/containers/wiki_app/restart'
+    method: POST
+

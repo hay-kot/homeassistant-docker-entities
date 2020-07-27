@@ -1,0 +1,11 @@
+# CONTAINER_NAME #################################################
+    docker_cmd_ALIAS:
+        name: Docker ALIAS Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

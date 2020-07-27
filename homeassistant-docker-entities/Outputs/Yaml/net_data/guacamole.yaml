@@ -1,0 +1,8 @@
+# Guacamole #################################################
+      guacamole_cpu:
+        data_group: cgroup_guacamole.cpu_limit
+        element: 'used'
+      guacamole_ram:
+        data_group: cgroup_guacamole.mem_usage_limit
+        element: 'used'
+

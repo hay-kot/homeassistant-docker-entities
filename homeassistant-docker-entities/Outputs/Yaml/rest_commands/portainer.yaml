@@ -1,0 +1,11 @@
+# Portainer #################################################
+  docker_portainer_start:
+    url: 'http://10.10.10.92:9919/containers/portainer/start'
+    method: POST
+  docker_portainer_stop:
+    url: 'http://10.10.10.92:9919/containers/portainer/stop'
+    method: POST
+  docker_portainer_restart:
+    url: 'http://10.10.10.92:9919/containers/portainer/restart'
+    method: POST
+

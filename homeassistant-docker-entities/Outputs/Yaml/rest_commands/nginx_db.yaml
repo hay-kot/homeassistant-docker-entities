@@ -1,0 +1,11 @@
+# Nginx_db #################################################
+  docker_nginx_db_start:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/start'
+    method: POST
+  docker_nginx_db_stop:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/stop'
+    method: POST
+  docker_nginx_db_restart:
+    url: 'http://10.10.10.92:9919/containers/nginx_db/restart'
+    method: POST
+

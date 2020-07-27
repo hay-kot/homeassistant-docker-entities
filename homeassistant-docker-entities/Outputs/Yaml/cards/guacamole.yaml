@@ -1,0 +1,18 @@
+# Guacamole #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_guacamole_up_time
+        name: null
+      - entity: sensor.docker_guacamole_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_guacamole
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_guacamole_status
+    icon: 'mdi:docker'
+    name: guacamole
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

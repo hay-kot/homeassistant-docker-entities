@@ -1,0 +1,11 @@
+# Guacamole #################################################
+  docker_guacamole_start:
+    url: 'http://10.10.10.92:9919/containers/guacamole/start'
+    method: POST
+  docker_guacamole_stop:
+    url: 'http://10.10.10.92:9919/containers/guacamole/stop'
+    method: POST
+  docker_guacamole_restart:
+    url: 'http://10.10.10.92:9919/containers/guacamole/restart'
+    method: POST
+

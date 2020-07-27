@@ -1,0 +1,8 @@
+# Influxdb #################################################
+      influxdb_cpu:
+        data_group: cgroup_influxdb.cpu_limit
+        element: 'used'
+      influxdb_ram:
+        data_group: cgroup_influxdb.mem_usage_limit
+        element: 'used'
+

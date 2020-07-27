@@ -1,0 +1,4 @@
+      - sensor.docker_radarr_status
+      - sensor.docker_radarr_up_time
+      - sensor.docker_radarr_cpu
+      - sensor.docker_radarr_ram

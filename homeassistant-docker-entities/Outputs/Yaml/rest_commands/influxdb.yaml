@@ -1,0 +1,11 @@
+# Influxdb #################################################
+  docker_influxdb_start:
+    url: 'http://10.10.10.92:9919/containers/influxdb/start'
+    method: POST
+  docker_influxdb_stop:
+    url: 'http://10.10.10.92:9919/containers/influxdb/stop'
+    method: POST
+  docker_influxdb_restart:
+    url: 'http://10.10.10.92:9919/containers/influxdb/restart'
+    method: POST
+

@@ -1,0 +1,11 @@
+# Organizr #################################################
+  docker_organizr_start:
+    url: 'http://10.10.10.92:9919/containers/organizr/start'
+    method: POST
+  docker_organizr_stop:
+    url: 'http://10.10.10.92:9919/containers/organizr/stop'
+    method: POST
+  docker_organizr_restart:
+    url: 'http://10.10.10.92:9919/containers/organizr/restart'
+    method: POST
+

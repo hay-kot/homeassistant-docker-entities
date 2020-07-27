@@ -1,0 +1,4 @@
+      - sensor.docker_portainer_status
+      - sensor.docker_portainer_up_time
+      - sensor.docker_portainer_cpu
+      - sensor.docker_portainer_ram

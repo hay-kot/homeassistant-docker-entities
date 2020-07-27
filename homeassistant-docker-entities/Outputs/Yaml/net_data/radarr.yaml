@@ -1,0 +1,8 @@
+# Radarr #################################################
+      radarr_cpu:
+        data_group: cgroup_radarr.cpu_limit
+        element: 'used'
+      radarr_ram:
+        data_group: cgroup_radarr.mem_usage_limit
+        element: 'used'
+

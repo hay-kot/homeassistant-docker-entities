@@ -1,0 +1,11 @@
+# Nginx_db #################################################
+    docker_cmd_nginx_db:
+        name: Docker nginx_db Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

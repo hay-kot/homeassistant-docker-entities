@@ -1,0 +1,11 @@
+# Wiki_db #################################################
+    docker_cmd_wiki_db:
+        name: Docker wiki_db Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

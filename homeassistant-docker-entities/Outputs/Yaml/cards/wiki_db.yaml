@@ -1,0 +1,18 @@
+# Wiki_db #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_wiki_db_up_time
+        name: null
+      - entity: sensor.docker_wiki_db_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_wiki_db
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_wiki_db_status
+    icon: 'mdi:docker'
+    name: wiki_db
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

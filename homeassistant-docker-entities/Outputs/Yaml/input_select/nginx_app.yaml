@@ -1,0 +1,11 @@
+# Nginx_app #################################################
+    docker_cmd_nginx_app:
+        name: Docker nginx_app Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

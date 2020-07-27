@@ -1,0 +1,11 @@
+# Grafana #################################################
+  docker_grafana_start:
+    url: 'http://10.10.10.92:9919/containers/grafana/start'
+    method: POST
+  docker_grafana_stop:
+    url: 'http://10.10.10.92:9919/containers/grafana/stop'
+    method: POST
+  docker_grafana_restart:
+    url: 'http://10.10.10.92:9919/containers/grafana/restart'
+    method: POST
+

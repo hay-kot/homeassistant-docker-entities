@@ -1,0 +1,8 @@
+# Filestash_office #################################################
+      filestash_office_cpu:
+        data_group: cgroup_filestash_office.cpu_limit
+        element: 'used'
+      filestash_office_ram:
+        data_group: cgroup_filestash_office.mem_usage_limit
+        element: 'used'
+

@@ -1,0 +1,4 @@
+      - sensor.docker_pihole_status
+      - sensor.docker_pihole_up_time
+      - sensor.docker_pihole_cpu
+      - sensor.docker_pihole_ram

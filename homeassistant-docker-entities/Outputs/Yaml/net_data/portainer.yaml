@@ -1,0 +1,8 @@
+# Portainer #################################################
+      portainer_cpu:
+        data_group: cgroup_portainer.cpu_limit
+        element: 'used'
+      portainer_ram:
+        data_group: cgroup_portainer.mem_usage_limit
+        element: 'used'
+

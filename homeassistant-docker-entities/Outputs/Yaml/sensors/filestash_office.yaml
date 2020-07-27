@@ -1,0 +1,12 @@
+# Filestash_office #################################################
+  - name: docker_filestash_office_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash_office%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_filestash_office_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22filestash_office%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+

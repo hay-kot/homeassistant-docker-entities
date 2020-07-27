@@ -1,0 +1,4 @@
+      - sensor.docker_ALIAS_status
+      - sensor.docker_ALIAS_up_time
+      - sensor.docker_ALIAS_cpu
+      - sensor.docker_ALIAS_ram

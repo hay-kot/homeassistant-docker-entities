@@ -1,0 +1,12 @@
+# Portainer #################################################
+  - name: docker_portainer_status
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22portainer%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_portainer_up_time
+    platform: rest
+    resource: http://10.10.10.92:9919/containers/json?filters={%22name%22:%20[%22portainer%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+

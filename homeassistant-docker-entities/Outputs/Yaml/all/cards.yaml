@@ -1,0 +1,288 @@
+# Filestash #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_filestash_up_time
+        name: null
+      - entity: sensor.docker_filestash_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_filestash
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_filestash_status
+    icon: 'mdi:docker'
+    name: filestash
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Grafana #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_grafana_up_time
+        name: null
+      - entity: sensor.docker_grafana_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_grafana
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_grafana_status
+    icon: 'mdi:docker'
+    name: grafana
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Pihole #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_pihole_up_time
+        name: null
+      - entity: sensor.docker_pihole_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_pihole
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_pihole_status
+    icon: 'mdi:docker'
+    name: pihole
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Sonarr #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_sonarr_up_time
+        name: null
+      - entity: sensor.docker_sonarr_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_sonarr
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_sonarr_status
+    icon: 'mdi:docker'
+    name: sonarr
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Influxdb #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_influxdb_up_time
+        name: null
+      - entity: sensor.docker_influxdb_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_influxdb
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_influxdb_status
+    icon: 'mdi:docker'
+    name: influxdb
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Portainer #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_portainer_up_time
+        name: null
+      - entity: sensor.docker_portainer_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_portainer
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_portainer_status
+    icon: 'mdi:docker'
+    name: portainer
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Radarr #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_radarr_up_time
+        name: null
+      - entity: sensor.docker_radarr_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_radarr
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_radarr_status
+    icon: 'mdi:docker'
+    name: radarr
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Nginx_app #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_nginx_app_up_time
+        name: null
+      - entity: sensor.docker_nginx_app_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_nginx_app
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_nginx_app_status
+    icon: 'mdi:docker'
+    name: nginx_app
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Wiki_db #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_wiki_db_up_time
+        name: null
+      - entity: sensor.docker_wiki_db_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_wiki_db
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_wiki_db_status
+    icon: 'mdi:docker'
+    name: wiki_db
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Filestash_office #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_filestash_office_up_time
+        name: null
+      - entity: sensor.docker_filestash_office_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_filestash_office
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_filestash_office_status
+    icon: 'mdi:docker'
+    name: filestash_office
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Organizr #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_organizr_up_time
+        name: null
+      - entity: sensor.docker_organizr_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_organizr
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_organizr_status
+    icon: 'mdi:docker'
+    name: organizr
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Wiki_app #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_wiki_app_up_time
+        name: null
+      - entity: sensor.docker_wiki_app_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_wiki_app
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_wiki_app_status
+    icon: 'mdi:docker'
+    name: wiki_app
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Emby #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_emby_up_time
+        name: null
+      - entity: sensor.docker_emby_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_emby
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_emby_status
+    icon: 'mdi:docker'
+    name: emby
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Watchtower #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_watchtower_up_time
+        name: null
+      - entity: sensor.docker_watchtower_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_watchtower
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_watchtower_status
+    icon: 'mdi:docker'
+    name: watchtower
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Nginx_db #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_nginx_db_up_time
+        name: null
+      - entity: sensor.docker_nginx_db_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_nginx_db
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_nginx_db_status
+    icon: 'mdi:docker'
+    name: nginx_db
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+
+# Guacamole #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_guacamole_up_time
+        name: null
+      - entity: sensor.docker_guacamole_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_guacamole
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_guacamole_status
+    icon: 'mdi:docker'
+    name: guacamole
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

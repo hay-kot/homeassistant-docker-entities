@@ -1,0 +1,8 @@
+# Sonarr #################################################
+      sonarr_cpu:
+        data_group: cgroup_sonarr.cpu_limit
+        element: 'used'
+      sonarr_ram:
+        data_group: cgroup_sonarr.mem_usage_limit
+        element: 'used'
+

@@ -1,0 +1,4 @@
+      - sensor.docker_wiki_app_status
+      - sensor.docker_wiki_app_up_time
+      - sensor.docker_wiki_app_cpu
+      - sensor.docker_wiki_app_ram

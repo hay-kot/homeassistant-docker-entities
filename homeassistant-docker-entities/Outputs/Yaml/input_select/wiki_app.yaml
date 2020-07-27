@@ -1,0 +1,11 @@
+# Wiki_app #################################################
+    docker_cmd_wiki_app:
+        name: Docker wiki_app Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

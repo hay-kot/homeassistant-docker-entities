@@ -1,0 +1,12 @@
+# CONTAINER_NAME #################################################
+  - name: docker_ALIAS_status
+    platform: rest
+    resource: DOCKER_URL/containers/json?filters={%22name%22:%20[%22ALIAS%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.State }}'
+  - name: docker_ALIAS_up_time
+    platform: rest
+    resource: DOCKER_URL/containers/json?filters={%22name%22:%20[%22ALIAS%22]}
+    scan_interval: 60
+    value_template: '{{ value_json.0.Status }}'
+

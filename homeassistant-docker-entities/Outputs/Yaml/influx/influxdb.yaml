@@ -1,0 +1,4 @@
+      - sensor.docker_influxdb_status
+      - sensor.docker_influxdb_up_time
+      - sensor.docker_influxdb_cpu
+      - sensor.docker_influxdb_ram

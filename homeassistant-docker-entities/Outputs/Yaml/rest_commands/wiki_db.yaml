@@ -1,0 +1,11 @@
+# Wiki_db #################################################
+  docker_wiki_db_start:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/start'
+    method: POST
+  docker_wiki_db_stop:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/stop'
+    method: POST
+  docker_wiki_db_restart:
+    url: 'http://10.10.10.92:9919/containers/wiki_db/restart'
+    method: POST
+

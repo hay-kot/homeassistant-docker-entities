@@ -1,0 +1,11 @@
+# Organizr #################################################
+    docker_cmd_organizr:
+        name: Docker organizr Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

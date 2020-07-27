@@ -1,0 +1,11 @@
+# Guacamole #################################################
+    docker_cmd_guacamole:
+        name: Docker guacamole Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

@@ -1,0 +1,11 @@
+# Grafana #################################################
+    docker_cmd_grafana:
+        name: Docker grafana Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

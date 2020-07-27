@@ -1,0 +1,128 @@
+# Filestash #################################################
+      filestash_cpu:
+        data_group: cgroup_filestash.cpu_limit
+        element: 'used'
+      filestash_ram:
+        data_group: cgroup_filestash.mem_usage_limit
+        element: 'used'
+
+# Grafana #################################################
+      grafana_cpu:
+        data_group: cgroup_grafana.cpu_limit
+        element: 'used'
+      grafana_ram:
+        data_group: cgroup_grafana.mem_usage_limit
+        element: 'used'
+
+# Pihole #################################################
+      pihole_cpu:
+        data_group: cgroup_pihole.cpu_limit
+        element: 'used'
+      pihole_ram:
+        data_group: cgroup_pihole.mem_usage_limit
+        element: 'used'
+
+# Sonarr #################################################
+      sonarr_cpu:
+        data_group: cgroup_sonarr.cpu_limit
+        element: 'used'
+      sonarr_ram:
+        data_group: cgroup_sonarr.mem_usage_limit
+        element: 'used'
+
+# Influxdb #################################################
+      influxdb_cpu:
+        data_group: cgroup_influxdb.cpu_limit
+        element: 'used'
+      influxdb_ram:
+        data_group: cgroup_influxdb.mem_usage_limit
+        element: 'used'
+
+# Portainer #################################################
+      portainer_cpu:
+        data_group: cgroup_portainer.cpu_limit
+        element: 'used'
+      portainer_ram:
+        data_group: cgroup_portainer.mem_usage_limit
+        element: 'used'
+
+# Radarr #################################################
+      radarr_cpu:
+        data_group: cgroup_radarr.cpu_limit
+        element: 'used'
+      radarr_ram:
+        data_group: cgroup_radarr.mem_usage_limit
+        element: 'used'
+
+# Nginx_app #################################################
+      nginx_app_cpu:
+        data_group: cgroup_nginx_app.cpu_limit
+        element: 'used'
+      nginx_app_ram:
+        data_group: cgroup_nginx_app.mem_usage_limit
+        element: 'used'
+
+# Wiki_db #################################################
+      wiki_db_cpu:
+        data_group: cgroup_wiki_db.cpu_limit
+        element: 'used'
+      wiki_db_ram:
+        data_group: cgroup_wiki_db.mem_usage_limit
+        element: 'used'
+
+# Filestash_office #################################################
+      filestash_office_cpu:
+        data_group: cgroup_filestash_office.cpu_limit
+        element: 'used'
+      filestash_office_ram:
+        data_group: cgroup_filestash_office.mem_usage_limit
+        element: 'used'
+
+# Organizr #################################################
+      organizr_cpu:
+        data_group: cgroup_organizr.cpu_limit
+        element: 'used'
+      organizr_ram:
+        data_group: cgroup_organizr.mem_usage_limit
+        element: 'used'
+
+# Wiki_app #################################################
+      wiki_app_cpu:
+        data_group: cgroup_wiki_app.cpu_limit
+        element: 'used'
+      wiki_app_ram:
+        data_group: cgroup_wiki_app.mem_usage_limit
+        element: 'used'
+
+# Emby #################################################
+      emby_cpu:
+        data_group: cgroup_emby.cpu_limit
+        element: 'used'
+      emby_ram:
+        data_group: cgroup_emby.mem_usage_limit
+        element: 'used'
+
+# Watchtower #################################################
+      watchtower_cpu:
+        data_group: cgroup_watchtower.cpu_limit
+        element: 'used'
+      watchtower_ram:
+        data_group: cgroup_watchtower.mem_usage_limit
+        element: 'used'
+
+# Nginx_db #################################################
+      nginx_db_cpu:
+        data_group: cgroup_nginx_db.cpu_limit
+        element: 'used'
+      nginx_db_ram:
+        data_group: cgroup_nginx_db.mem_usage_limit
+        element: 'used'
+
+# Guacamole #################################################
+      guacamole_cpu:
+        data_group: cgroup_guacamole.cpu_limit
+        element: 'used'
+      guacamole_ram:
+        data_group: cgroup_guacamole.mem_usage_limit
+        element: 'used'
+

@@ -1,0 +1,11 @@
+# CONTAINER_NAME #################################################
+  docker_ALIAS_start:
+    url: 'DOCKER_URL/containers/ALIAS/start'
+    method: POST
+  docker_ALIAS_stop:
+    url: 'DOCKER_URL/containers/ALIAS/stop'
+    method: POST
+  docker_ALIAS_restart:
+    url: 'DOCKER_URL/containers/ALIAS/restart'
+    method: POST
+

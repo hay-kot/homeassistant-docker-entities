@@ -1,0 +1,11 @@
+# Watchtower #################################################
+  docker_watchtower_start:
+    url: 'http://10.10.10.92:9919/containers/watchtower/start'
+    method: POST
+  docker_watchtower_stop:
+    url: 'http://10.10.10.92:9919/containers/watchtower/stop'
+    method: POST
+  docker_watchtower_restart:
+    url: 'http://10.10.10.92:9919/containers/watchtower/restart'
+    method: POST
+

@@ -1,0 +1,63 @@
+custom_fields:
+  cpu: |
+    [[[
+      return `<ha-icon
+        icon="mdi:chip"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> CPU: <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_cpu'].state}%</span></span>`
+    ]]]
+  up: |
+    [[[
+      return `<ha-icon
+        icon="mdi:power"
+        style="width: 20px; height: 20px; color: #B58E31;">
+        </ha-icon><span> <span style=color: var(--text-color-sensor);>${states['sensor.docker_portainer_up_time'].state}</span></span>`
+    ]]]
+entity: sensor.docker_portainer_status
+name: portainer
+show_entity_picture: true
+show_state: false
+size: 60%
+state:
+  - entity_picture: /local/images/docker_1.png
+    styles:
+      entity_picture:
+        - filter: grayscale(90%)
+    value: 'off'
+  - entity_picture: /local/images/docker_1.png
+    value: running
+styles:
+  custom_fields:
+    cpu:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_portainer_cpu"].state > 80) return "red";
+          ]]]
+    up:
+      - padding-bottom: 0px
+      - padding-left: 2px
+      - align-self: start
+      - font-size: 12px
+      - justify-self: start
+      - '--text-color-sensor': >-
+          [[[ if (states["sensor.docker_portainer_cpu"].state > 80) return "red";
+          ]]]
+  grid:
+    - grid-template-areas: '"i i" "n n" "up up" "cpu cpu"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content min-content
+  name:
+    - font-weight: bold
+    - font-size: 16px
+    - color: white
+    - align-self: middle
+    - justify-self: middle
+    - padding-bottom: 4px
+tap_action:
+  action: more-info
+  entity: input_select.docker_cmd_wiki_app
+type: 'custom:button-card'

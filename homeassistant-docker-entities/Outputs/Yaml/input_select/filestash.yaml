@@ -1,0 +1,11 @@
+# Filestash #################################################
+    docker_cmd_filestash:
+        name: Docker filestash Command
+        options:
+         - Idle
+         - Start
+         - Stop
+         - Restart
+        initial: Idle
+        icon: mdi:restart
+

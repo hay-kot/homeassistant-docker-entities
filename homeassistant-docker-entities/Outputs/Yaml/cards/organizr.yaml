@@ -1,0 +1,18 @@
+# Organizr #################################################
+entities:
+  - entities:
+      - entity: sensor.docker_organizr_up_time
+        name: null
+      - entity: sensor.docker_organizr_cpu
+        name: CPU
+      - entity: input_select.docker_cmd_organizr
+        name: null
+        icon: mdi:restart
+    entity: sensor.docker_organizr_status
+    icon: 'mdi:docker'
+    name: organizr
+    secondary_info: Docker
+    state_header: Status
+    type: 'custom:multiple-entity-row'
+type: entities
+

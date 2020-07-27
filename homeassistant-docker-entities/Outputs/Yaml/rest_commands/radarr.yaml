@@ -1,0 +1,11 @@
+# Radarr #################################################
+  docker_radarr_start:
+    url: 'http://10.10.10.92:9919/containers/radarr/start'
+    method: POST
+  docker_radarr_stop:
+    url: 'http://10.10.10.92:9919/containers/radarr/stop'
+    method: POST
+  docker_radarr_restart:
+    url: 'http://10.10.10.92:9919/containers/radarr/restart'
+    method: POST
+
